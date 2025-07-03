@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.calculator {
+    background: #2d3748;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    width: 100%;
+}
+.display {
+    background: #1a202c;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.display-previous {
+    color: #a0aec0;
+    font-size: 14px;
+    margin-bottom: 5px;
+    min-height: 20px;
+}
+.display-current {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 300;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+button {
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    height: 70px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+button:active {
+    transform: translateY(0);
+}
+.btn-number {
+    background: #4a5568;
+    color: #ffffff;
+}
+.btn-number:hover {
+    background: #5a6578;
+}
+.btn-operator {
+    background: #ed8936;
+    color: #ffffff;
+}
+.btn-operator:hover {
+    background: #f6ad55;
+}
+.btn-operator.active {
+    background: #f6ad55;
+    transform: scale(0.95);
+}
+.btn-clear {
+    background: #e53e3e;
+    color: #ffffff;
+}
+.btn-clear:hover {
+    background: #fc8181;
+}
+.btn-equals {
+    background: #38a169;
+    color: #ffffff;
+}
+.btn-equals:hover {
+    background: #48bb78;
+}
+.btn-span-2 {
+    grid-column: span 2;
+}
+@media (max-width: 400px) {
+    .calculator {
+        padding: 20px;
+    }            
+    button {
+        height: 60px;
+        font-size: 18px;
+    }            
+    .display-current {
+        font-size: 28px;
+    }
+}
